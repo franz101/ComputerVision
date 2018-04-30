@@ -72,3 +72,22 @@ prediction_labels = np.take(train_labels, indices)
 accuracy = np.mean(prediction_labels == test_labels)
 # Akurazität von 25%.... Sehr schlecht.
 
+# Aufgabe 2:
+from scipy.ndimage.morphology import binary_opening
+
+test_binary = [binary_opening(img)[0] for img in test]
+train_binary = [binary_opening(img)[0] for img in train]
+
+
+"""from skimage import transform
+>>> transform.rotate(img,20) #oder:
+>>> from skimage.transform import rotate
+>>> rotate(img,20)"""
+
+### skimage.measure.regionprops
+
+
+""" mask = mask.astype(np.int)
+>>> props = regionprops(mask)[0]
+>>> props.bbox#xMin,yMin,xMax,yMax"""
+##mask = opening(mask, disk(5)).astype(np.uint8)
