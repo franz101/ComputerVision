@@ -1,0 +1,1 @@
+https://github.com/yannic-b/CV-Praktikum-WS1718/blob/master/Woche%206/kerasMNIST.py
